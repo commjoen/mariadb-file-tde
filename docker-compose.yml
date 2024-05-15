@@ -9,7 +9,7 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: password
     volumes:
-      - data:/var/lib/mysql
+      - data:/var/lib/mysql2
       - ./dev/mariadb:/docker-entrypoint-initdb.d
       - ./encryptionsetup:/etc/initencrypt
       - ${PWD}/encryptionsetup/my.cnf:/etc/mysql/my.cnf
