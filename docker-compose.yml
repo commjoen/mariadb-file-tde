@@ -11,5 +11,8 @@ services:
     volumes:
       - data:/var/lib/mysql
       - ./dev/mariadb:/docker-entrypoint-initdb.d
+      - ./encryptionsetup:/etc/initencrypt
+      - ${PWD}/encryptionsetup/my.cnf:/etc/mysql/my.cnf
+      - ./encryptionkeys:/etc/mysql/encryption
     ports:
       - "3306:3306"
